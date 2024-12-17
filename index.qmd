@@ -33,39 +33,43 @@ grad = grDevices::colorRampPalette(c(dar, pin))(5)
 ![](bsvarSIGNs.png){.absolute top=80 right=-75 width="400"}
 
 
-## <span style='color: #ff68b4;'>Wielowymiarowe bayesowskie dynamiczne modele strukturalne z paczek bsvars i bsvarSIGNs dla R</span> {background-color="#77001b"}
+## <span style='color: #ff68b4;'>Część pierwsza</span> {background-color="#77001b"}
 
 $$ $$
 
-### structural vector autoregressions {style="color:#ff68b4;"}
-
-### predictive analyses using structural VARs {style="color:#ff68b4;"}
-
-### bsvars and bsvarSIGNs features {style="color:#ff68b4;"}
-
-### a small fiscal policy system analysis {style="color:#ff68b4;"}
-
-
-
-
-
-
-
-## <span style='color: #ff68b4;'>materials</span> {background-color="#77001b"} 
+### Wielowymiarowe bayesowskie dynamiczne modele strukturalne z paczek bsvars i bsvarSIGNs dla R  {style="color:#ff68b4;"}
 
 $$ $$
 
-### lecture slides [as a website](https://bsvars.org/2024-12-F4SG/) {style="color:#ff68b4;"}
+#### structural vector autoregressions {style="color:#ff68b4;"}
 
-### GitHub [repo](https://github.com/bsvars/2024-12-F4SG) to reproduce the slides and results{style="color:#ff68b4;"}
+#### predictive analyses using structural VARs {style="color:#ff68b4;"}
+
+#### bsvars and bsvarSIGNs features {style="color:#ff68b4;"}
+
+#### a small fiscal policy system analysis {style="color:#ff68b4;"}
+
+
+
+
+
+
+
+## <span style='color: #ff68b4;'>materiały</span> {background-color="#77001b"} 
 
 $$ $$
 
-### [bsvars.org](https://bsvars.org/) official project website{style="color:#ff68b4;"}
+### slajdy jako [strona internetowa](https://bsvars.org/2024-12-uek/) {style="color:#ff68b4;"}
 
-### [bsvars](https://cran.r-project.org/package=bsvars) package on CRAN{style="color:#ff68b4;"}
+### [repozytorium](https://github.com/bsvars/2024-12-uek) na GitHub dla reprodukcji wyników{style="color:#ff68b4;"}
 
-### [bsvarSIGNs](https://cran.r-project.org/package=bsvarSIGNs) package on CRAN{style="color:#ff68b4;"}
+$$ $$
+
+### [bsvars.org](https://bsvars.org/) officjalna strona{style="color:#ff68b4;"}
+
+### paczka [bsvars](https://cran.r-project.org/package=bsvars) na stronach CRAN{style="color:#ff68b4;"}
+
+### paczka [bsvarSIGNs](https://cran.r-project.org/package=bsvarSIGNs) na stronach CRAN{style="color:#ff68b4;"}
 
 
 
