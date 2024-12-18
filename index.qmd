@@ -1120,41 +1120,36 @@ abline(h = 0, lwd = 0.5)
 
 ## <span style='color: #ff68b4;'>Australian Monetary Policy Analysis</span> {background-color="#77001b"}
 
+$$ $$
 
+[Download reproduction script](https://github.com/bsvars/2024-12-uek/blob/master/bsvars_oz.R)
 
 
 
 ## Australian Monetary Policy Analysis
 
-::: footer [bsvars.org](https://bsvars.org) :::
-
-Based on [Turnip (2017)]( https://doi.org/10.1111/1475-4932.12345)
+::: footer 
+[bsvars.org](https://bsvars.org) 
+:::
 
 ### System of four variables.
+
+Based on [Turnip (2017)]( https://doi.org/10.1111/1475-4932.12345)
 
 \begin{align}
 y_t = \begin{bmatrix} \Delta rgdp_t & \pi_t & cr_t & \Delta rtwi_t \end{bmatrix}'
 \end{align}
 
-### Alternative identification patterns.
+### A lower-triangular identification pattern.
 
 \begin{align}
-\textbf{lower-triangular} && \textbf{extended}\\
 \begin{bmatrix}
 B_{11}&0&0&0\\
 B_{21}&B_{22}&0&0\\
 B_{31}&B_{32}&B_{33}&0\\
 B_{41}&B_{42}&B_{43}&B_{44}
 \end{bmatrix}
-\begin{bmatrix} \Delta rgdp_t \\ \pi_t \\ cr_t \\ \Delta rtwi_t \end{bmatrix} &&
-\begin{bmatrix}
-B_{11}&0&0&0\\
-B_{21}&B_{22}&0&0\\
-B_{31}&B_{32}&B_{33}&B_{34}\\
-B_{41}&B_{42}&B_{43}&B_{44}
-\end{bmatrix}
-\begin{bmatrix} \Delta rgdp_t \\ \pi_t \\ cr_t \\ \Delta rtwi_t \end{bmatrix}
-\end{align}
+\begin{bmatrix} \Delta rgdp_t \\ \pi_t \\ cr_t \\ \Delta rtwi_t \end{bmatrix} \end{align}
 
 - In the **extended** model, the monetary policy shock is not identified
 - Use identification via heteroskedasticity to identify it
@@ -1198,49 +1193,18 @@ plot(y, main = "Australian monetary system",
 ```
 
 
-::: footer [bsvars.org](https://bsvars.org) :::
-
-
-## Estimation Setup
-
-::: footer [bsvars.org](https://bsvars.org) :::
-
-```{r} 
-#| cache: true
-
-# setup
-############################################################
-library(bsvars)
-set.seed(123)
-
-N       = ncol(y)
-p       = 9
-S_burn  = 1e4
-S       = 2e4
-thin    = 2
-```
+::: footer 
+[bsvars.org](https://bsvars.org) 
+:::
 
 
 
-## Extended Model Identification Setup
+## Model Estimation
 
-::: footer [bsvars.org](https://bsvars.org) :::
+::: footer 
+[bsvars.org](https://bsvars.org) 
+:::
 
-```{r} 
-#| cache: true
-# structural matrix - extended model
-############################################################
-B_LR = matrix(TRUE, N, N)
-B_LR[upper.tri(B_LR)] = FALSE
-B_LR[3,4] = TRUE
-B_LR
-```
-
-
-
-## Alternative Models Estimation
-
-::: footer [bsvars.org](https://bsvars.org) :::
 
 ### Lower-triangular model with zero prior mean for $\mathbf{A}$.
 
@@ -1249,293 +1213,112 @@ B_LR
 #| eval: true
 # estimation - lower-triangular model
 ############################################################
-spec_bsvar0     = specify_bsvar$new(as.matrix(y), p = p, stationary = rep(TRUE, N))
-spec_bsvar0 |>
-  estimate(S = S_burn) |>
-  estimate(S = S, thin = thin) -> soe_bsvar0
+library(bsvars)
+set.seed(123)
+
+spec = specify_bsvar$new(
+  as.matrix(y), 
+  p = 4, 
+  stationary = rep(TRUE, 4)
+)
+spec |>
+  estimate(S = 1000) |>
+  estimate(S = 5000) -> post
 ```
 
 
 
 
+## Compute impulse responses
 
-
-## Alternative Models Estimation
-
-::: footer [bsvars.org](https://bsvars.org) :::
-
-### Extended model with MLE prior mean for $\mathbf{A}$.
-
-```{r}
-#| cache: true
-#| code-line-numbers: "3-4"
-#| eval: true
-
-# estimation - extended model - MLE prior for A
-############################################################
-spec_bsvar_lr   = specify_bsvar$new(as.matrix(y), p = p, B = B_LR, stationary = rep(TRUE, N))
-
-spec_bsvar_lr |>
-  estimate(S = S_burn) |>
-  estimate(S = S, thin = thin) -> soe_bsvar_lr
-```
-
-
-
-
-
-## Alternative Models Estimation
-
-::: footer [bsvars.org](https://bsvars.org) :::
-
-### Lower-triangular model with Stochastic Volatility heteroskedastisity.
-
-```{r}
-#| cache: true
-#| code-line-numbers: "3"
-#| eval: true
-
-# estimation - lower-triangular SV heteroskedastic model
-############################################################
-spec_bsvar_sv = specify_bsvar_sv$new(as.matrix(y), p = p, stationary = rep(TRUE, N))
-
-spec_bsvar_sv |>
-  estimate(S = S_burn) |>
-  estimate(S = S, thin = thin) -> soe_bsvar_sv
-```
-
-
-
-
-
-## Alternative Models Estimation
-
-::: footer [bsvars.org](https://bsvars.org) :::
-
-### Extended model with Stochastic Volatility heteroskedastisity.
-
-```{r}
-#| cache: true
-#| code-line-numbers: "3"
-#| eval: true
-
-# estimation - extended SV heteroskedastic model
-############################################################
-spec_bsvar_lr_sv = specify_bsvar_sv$new(as.matrix(y), p = p, B = B_LR, stationary = rep(TRUE, N))
-
-spec_bsvar_lr_sv |>
-  estimate(S = S_burn) |>
-  estimate(S = S, thin = thin) -> soe_bsvar_lr_sv
-
-```
-
-
-
-
-
-## IRFs: Compute impulse responses
-
-::: footer [bsvars.org](https://bsvars.org) :::
+::: footer 
+[bsvars.org](https://bsvars.org) 
+:::
 
 ```{r}
 #| cache: true
 
-ir_bsvar0       = compute_impulse_responses(soe_bsvar0, horizon = 20)
-ir_bsvar0[,3,,] = 0.25 * ir_bsvar0[,3,,] / mean(ir_bsvar0[3,3,1,])
-
-ir_bsvar_lr        = compute_impulse_responses(soe_bsvar_lr, horizon = 20)
-ir_bsvar_lr[,3,,]  = 0.25 * ir_bsvar_lr[,3,,] / mean(ir_bsvar_lr[3,3,1,])
-
-ir_bsvar_sv        = compute_impulse_responses(soe_bsvar_sv, horizon = 20)
-ir_bsvar_sv[,3,,]  = 0.25 * ir_bsvar_sv[,3,,] / mean(ir_bsvar_sv[3,3,1,])
-
-ir_bsvar_lr_sv        = compute_impulse_responses(soe_bsvar_lr_sv, horizon = 20)
-ir_bsvar_lr_sv[,3,,]  = 0.25 * ir_bsvar_lr_sv[,3,,] / mean(ir_bsvar_lr_sv[3,3,1,])
+post |> 
+  compute_impulse_responses(horizon = 20) |> 
+  plot()
 
 ```
 
 
 
 
-## IRFs: Recursive vs. Extended (homosk)
 
-::: footer [bsvars.org](https://bsvars.org) :::
+
+## Compute forecast error variance decompositions
+
+::: footer 
+[bsvars.org](https://bsvars.org) 
+:::
 
 ```{r}
 #| cache: true
-#| echo: false
-#| fig-align: "center"
-#| fig-height: 8
 
-par(mfrow = c(4,2))
-for (n in 1:4) {
-  bsvarTVPs::ribbon_plot(
-    ir_bsvar[n,3,,],
-    main = paste("Response of",colnames(y)[n],"to the mps"),
-    ylab = colnames(y)[n],
-    xlab = "horizon [quarters]",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 0)
-  bsvarTVPs::ribbon_plot(
-    ir_bsvar_lr[n,3,,],
-    main = paste("Response of",colnames(y)[n],"to the mps"),
-    ylab = colnames(y)[n],
-    xlab = "horizon [quarters]",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 0)
-}
+post |> 
+  compute_variance_decompositions(horizon = 20) |> 
+  plot()
+
 ```
 
 
-## IRFs: Homosk vs. SV (Recursive)
 
-::: footer [bsvars.org](https://bsvars.org) :::
+
+
+
+
+
+## Compute structural shocks
+
+::: footer 
+[bsvars.org](https://bsvars.org) 
+:::
 
 ```{r}
 #| cache: true
-#| echo: false
-#| fig-align: "center"
-#| fig-height: 7
 
-par(mfrow = c(4,2))
-for (n in 1:4) {
-  bsvarTVPs::ribbon_plot(
-    ir_bsvar[n,3,,],
-    main = paste("Response of",colnames(y)[n],"to the mps"),
-    ylab = colnames(y)[n],
-    xlab = "horizon [quarters]",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 0)
-  bsvarTVPs::ribbon_plot(
-    ir_bsvar_sv[n,3,,],
-    main = paste("Response of",colnames(y)[n],"to the mps"),
-    ylab = colnames(y)[n],
-    xlab = "horizon [quarters]",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 0)
-}
+post |> 
+  compute_structural_shocks() |> 
+  plot()
+
 ```
 
 
-## IRFs: Homosk vs. SV (Extended)
+## Compute fitted values
 
-::: footer [bsvars.org](https://bsvars.org) :::
+::: footer 
+[bsvars.org](https://bsvars.org) 
+:::
 
 ```{r}
 #| cache: true
-#| echo: false
-#| fig-align: "center"
-#| fig-height: 7
 
-par(mfrow = c(4,2))
-for (n in 1:4) {
-  bsvarTVPs::ribbon_plot(
-    ir_bsvar_lr[n,3,,],
-    main = paste("Response of",colnames(y)[n],"to the mps"),
-    ylab = colnames(y)[n],
-    xlab = "horizon [quarters]",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 0)
-  bsvarTVPs::ribbon_plot(
-    ir_bsvar_lr_sv[n,3,,],
-    main = paste("Response of",colnames(y)[n],"to the mps"),
-    ylab = colnames(y)[n],
-    xlab = "horizon [quarters]",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 0)
-}
+post |> 
+  compute_fitted_values() |> 
+  plot()
+
 ```
 
 
 
 
-## SDs: homoskedastic vs. SV (Recursive)
+## Compute forecasts
 
-::: footer [bsvars.org](https://bsvars.org) :::
+::: footer 
+[bsvars.org](https://bsvars.org) 
+:::
 
 ```{r}
 #| cache: true
-#| echo: false
-#| fig-align: "center"
-#| fig-height: 7
 
-sd      = compute_conditional_sd(soe_bsvar)
-sd_sv   = compute_conditional_sd(soe_bsvar_sv)
+post |> 
+  forecast(horizon = 8) |> 
+  plot(data_in_plot = 0.3)
 
-par(mfrow = c(4,2))
-for (n in 1:4) {
-  bsvarTVPs::ribbon_plot(
-    sd[n,,],
-    main = paste("SD of",colnames(y)[n]),
-    ylab = colnames(y)[n],
-    xlab = "time",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 1)
-  bsvarTVPs::ribbon_plot(
-    sd_sv[n,,],
-    main = paste("SD of",colnames(y)[n]),
-    ylab = colnames(y)[n],
-    xlab = "time",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 1)
-}
 ```
-
-
-
-
-## SDs: homoskedastic vs. SV (Extended)
-
-::: footer [bsvars.org](https://bsvars.org) :::
-
-```{r}
-#| cache: true
-#| echo: false
-#| fig-align: "center"
-#| fig-height: 7
-
-sd      = compute_conditional_sd(soe_bsvar_lr)
-sd_sv   = compute_conditional_sd(soe_bsvar_lr_sv)
-
-par(mfrow = c(4,2))
-for (n in 1:4) {
-  bsvarTVPs::ribbon_plot(
-    sd[n,,],
-    main = paste("SD of",colnames(y)[n]),
-    ylab = colnames(y)[n],
-    xlab = "time",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 1)
-  bsvarTVPs::ribbon_plot(
-    sd_sv[n,,],
-    main = paste("SD of",colnames(y)[n]),
-    ylab = colnames(y)[n],
-    xlab = "time",
-    bty  = "n",
-    col = "#77001b"
-  )
-  abline(h = 1)
-}
-```
-
 
 
 
