@@ -55,6 +55,24 @@ $$ $$
 
 
 
+## <span style='color: #ff68b4;'>Część druga</span> {background-color="#77001b"}
+
+$$ $$
+
+### Analiza efektów australijskiej polityki monetarnej używając paczki bsvars  {style="color:#ff68b4;"}
+
+$$ $$
+
+#### Analiza efektów australijskiej polityki monetarnej {style="color:#ff68b4;"}
+
+#### ustawienie i estymacja modelu {style="color:#ff68b4;"}
+
+#### analizy strukturalne i predyktywne {style="color:#ff68b4;"}
+
+
+
+
+
 ## <span style='color: #ff68b4;'>materiały</span> {background-color="#77001b"} 
 
 $$ $$
