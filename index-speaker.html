@@ -399,10 +399,10 @@
 <p><span class="math display">\[ \]</span></p>
 <h3 style="color:#ff68b4;" id="wielowymiarowe-bayesowskie-dynamiczne-modele-strukturalne-z-paczek-bsvars-i-bsvarsigns-dla-r">Wielowymiarowe bayesowskie dynamiczne modele strukturalne z paczek bsvars i bsvarSIGNs dla R</h3>
 <p><span class="math display">\[ \]</span></p>
-<h4 style="color:#ff68b4;" id="structural-vector-autoregressions">structural vector autoregressions</h4>
-<h4 style="color:#ff68b4;" id="predictive-analyses-using-structural-vars">predictive analyses using structural VARs</h4>
-<h4 style="color:#ff68b4;" id="bsvars-and-bsvarsigns-features">bsvars and bsvarSIGNs features</h4>
-<h4 style="color:#ff68b4;" id="a-small-fiscal-policy-system-analysis">a small fiscal policy system analysis</h4>
+<h4 style="color:#ff68b4;" id="cechy-paczek-bsvars-i-bsvarsigns">cechy paczek bsvars i bsvarSIGNs</h4>
+<h4 style="color:#ff68b4;" id="strukturalne-modele-var">strukturalne modele VAR</h4>
+<h4 style="color:#ff68b4;" id="identyfikacja-modeli-strukturalnych">identyfikacja modeli strukturalnych</h4>
+<h4 style="color:#ff68b4;" id="modelowanie-rozkładu-i-zmienności">modelowanie rozkładu i zmienności</h4>
 </section>
 <section id="materiały" class="slide level2" data-background-color="#77001b">
 <h2><span style="color: #ff68b4;">materiały</span></h2>
@@ -414,11 +414,11 @@
 <h3 style="color:#ff68b4;" id="paczka-bsvars-na-stronach-cran">paczka <a href="https://cran.r-project.org/package=bsvars">bsvars</a> na stronach CRAN</h3>
 <h3 style="color:#ff68b4;" id="paczka-bsvarsigns-na-stronach-cran">paczka <a href="https://cran.r-project.org/package=bsvarSIGNs">bsvarSIGNs</a> na stronach CRAN</h3>
 </section>
-<section id="bsvars-and-bsvarsigns-features-1" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">bsvars and bsvarSIGNs features</span></h2>
+<section id="cechy-paczek-bsvars-i-bsvarsigns-1" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">cechy paczek bsvars i bsvarSIGNs</span></h2>
 </section>
-<section id="bsvars-and-bsvarsigns-features-2" class="slide level2">
-<h2>bsvars and bsvarSIGNs features</h2>
+<section id="cechy-paczek-bsvars-i-bsvarsigns-2" class="slide level2">
+<h2>cechy paczek bsvars i bsvarSIGNs</h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -430,23 +430,23 @@
 </div>
 </div>
 </section>
-<section id="bsvars-and-bsvarsigns-features-3" class="slide level2">
-<h2>bsvars and bsvarSIGNs features</h2>
+<section id="cechy-paczek-bsvars-i-bsvarsigns-3" class="slide level2">
+<h2>cechy paczek bsvars i bsvarSIGNs</h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
 <p><span class="math display">\[ \]</span></p>
 <ul>
-<li>Bayesian estimation of Structural VARs</li>
-<li>coherent code structure, workflows, and objects</li>
-<li>excellent computational speed</li>
-<li>frontier econometric &amp; numerical techniques</li>
-<li>written in <strong>C++</strong> using <strong>Rcpp</strong> and <strong>RcppArmadillo</strong></li>
-<li>data analysis in <strong>R</strong></li>
+<li>bayesowska estymacja modeli strukturalnych VAR</li>
+<li>koherentna struktura kodu, skryptów i objektów</li>
+<li>świetna szybkość obliczeniowa</li>
+<li>najnowsze metody ekonometryczne i numeryczne</li>
+<li>napisane w <strong>C++</strong> dzięki paczkom <strong>Rcpp</strong> i <strong>RcppArmadillo</strong></li>
+<li>analiza danych w <strong>R</strong></li>
 </ul>
 </section>
-<section id="bsvars-and-bsvarsigns-features-4" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">bsvars and bsvarSIGNs features</span></h2>
+<section id="cechy-paczek-bsvars-i-bsvarsigns-4" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">cechy paczek bsvars i bsvarSIGNs</span></h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -454,20 +454,20 @@
 <div class="column" style="width:50%;">
 <p><img data-src="bsvars.png" width="120"></p>
 <ul>
-<li>package and data loading</li>
+<li>ładowanie paczki i danych</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">library</span>(bsvars)</span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">data</span>(us_fiscal_lsuw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>simple model setup</li>
+<li>łatwa inicjalizacja modelu</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>spec <span class="ot">=</span> specify_bsvar<span class="sc">$</span><span class="fu">new</span>(us_fiscal_lsuw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>simple estimation</li>
+<li>prosta estymacja</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>burn <span class="ot">=</span> <span class="fu">estimate</span>(spec, <span class="at">S =</span> <span class="dv">1000</span>)</span>
@@ -476,20 +476,20 @@
 </div><div class="column" style="width:50%;">
 <p><img data-src="bsvarSIGNs.png" width="120"></p>
 <ul>
-<li>package and data loading</li>
+<li>ładowanie paczki i danych</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(bsvarSIGNs)</span>
 <span id="cb4-2"><a href="#cb4-2"></a><span class="fu">data</span>(optimism)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>simple model setup</li>
+<li>łatwa inicjalizacja modelu</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>spec <span class="ot">=</span> specify_bsvarSIGN<span class="sc">$</span><span class="fu">new</span>(optimism)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>simple estimation</li>
+<li>prosta estymacja</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>post <span class="ot">=</span> <span class="fu">estimate</span>(spec, <span class="at">S =</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -497,8 +497,8 @@
 </div>
 </div>
 </section>
-<section id="bsvars-and-bsvarsigns-features-5" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">bsvars and bsvarSIGNs features</span></h2>
+<section id="cechy-paczek-bsvars-i-bsvarsigns-5" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">cechy paczek bsvars i bsvarSIGNs</span></h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -506,7 +506,7 @@
 <div class="column" style="width:50%;">
 <p><img data-src="bsvars.png" width="120"></p>
 <ul>
-<li>structural analyses</li>
+<li>analizy strukturalne</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>irfs <span class="ot">=</span> <span class="fu">compute_impulse_responses</span>(post , <span class="at">horizon =</span> <span class="dv">12</span>)</span>
@@ -519,7 +519,7 @@
 </div><div class="column" style="width:50%;">
 <p><img data-src="bsvarSIGNs.png" width="120"></p>
 <ul>
-<li>structural analyses</li>
+<li>analizy strukturalne</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>irfs <span class="ot">=</span> <span class="fu">compute_impulse_responses</span>(post , <span class="at">horizon =</span> <span class="dv">12</span>)</span>
@@ -531,8 +531,8 @@
 </div>
 </div>
 </section>
-<section id="bsvars-and-bsvarsigns-features-6" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">bsvars and bsvarSIGNs features</span></h2>
+<section id="cechy-paczek-bsvars-i-bsvarsigns-6" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">cechy paczek bsvars i bsvarSIGNs</span></h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -540,14 +540,14 @@
 <div class="column" style="width:50%;">
 <p><img data-src="bsvars.png" width="120"></p>
 <ul>
-<li>predictive analyses</li>
+<li>analizy predyktywne</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>fvs  <span class="ot">=</span> <span class="fu">compute_fitted_values</span>(post)</span>
 <span id="cb9-2"><a href="#cb9-2"></a>fore <span class="ot">=</span> <span class="fu">forecast</span>(post, <span class="at">horizon =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>plots and summaries</li>
+<li>wykresy i podsumowania</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">plot</span>(irfs)</span>
@@ -556,14 +556,14 @@
 </div><div class="column" style="width:50%;">
 <p><img data-src="bsvarSIGNs.png" width="120"></p>
 <ul>
-<li>predictive analyses</li>
+<li>analizy predyktywne</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>fvs  <span class="ot">=</span> <span class="fu">compute_fitted_values</span>(post)</span>
 <span id="cb11-2"><a href="#cb11-2"></a>fore <span class="ot">=</span> <span class="fu">forecast</span>(post, <span class="at">horizon =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
-<li>plots and summaries</li>
+<li>wykresy i podsumowania</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">plot</span>(irfs)</span>
@@ -572,8 +572,8 @@
 </div>
 </div>
 </section>
-<section id="bsvars-and-bsvarsigns-features-7" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">bsvars and bsvarSIGNs features</span></h2>
+<section id="cechy-paczek-bsvars-i-bsvarsigns-7" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">cechy paczek bsvars i bsvarSIGNs</span></h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -581,7 +581,7 @@
 <div class="column" style="width:50%;">
 <p><img data-src="bsvars.png" width="120"></p>
 <ul>
-<li>workflow with the pipe</li>
+<li>skrypty z przekierowaniem</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">library</span>(bsvars)</span>
@@ -603,7 +603,7 @@
 </div><div class="column" style="width:50%;">
 <p><img data-src="bsvarSIGNs.png" width="120"></p>
 <ul>
-<li>workflow with the pipe</li>
+<li>skrypty z przekierowaniem</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">library</span>(bsvarSIGNs)</span>
@@ -623,8 +623,8 @@
 </div>
 </div>
 </section>
-<section id="bsvars-and-bsvarsigns-features-8" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">bsvars and bsvarSIGNs features</span></h2>
+<section id="cechy-paczek-bsvars-i-bsvarsigns-8" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">cechy paczek bsvars i bsvarSIGNs</span></h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -632,70 +632,66 @@
 <div class="column" style="width:50%;">
 <p><img data-src="bsvars.png" width="120"></p>
 <ul>
-<li>progress bar</li>
+<li>monitorowanie postępu</li>
 </ul>
 <p><img data-src="bsvars_progress.png" width="500"></p>
 </div><div class="column" style="width:50%;">
 <p><img data-src="bsvarSIGNs.png" width="120"></p>
 <ul>
-<li>progress bar</li>
+<li>monitorowanie postępu</li>
 </ul>
 <p><img data-src="bsvarSIGNs_progress.png" width="500"></p>
 </div>
 </div>
 </section>
-<section id="structural-vector-autoregressions-1" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">structural vector autoregressions</span></h2>
+<section id="strukturalne-modele-var-1" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">strukturalne modele VAR</span></h2>
 </section>
-<section id="structural-vector-autoregressions-2" class="slide level2">
-<h2>structural vector autoregressions</h2>
+<section id="strukturalne-modele-var-2" class="slide level2">
+<h2>strukturalne modele VAR</h2>
 <ul>
-<li>go-to models for the analysis of policy effects</li>
-</ul>
-<div>
+<li>podstawowe dla modelowania efektów polityki ekonomicznej</li>
+<li>analiza <strong>dynamicznych efektów przyczynowych</strong> dobrze izolowanej przyczyny</li>
+<li>stosunkowo proste w pracy z danymi i dostarczają <em>empirycznych dowodów na propagację szoków</em> przez gospodarki i rynki</li>
+<li>dostarczają empirycznych faktów do uwzględnienia w modelach teoretyczne</li>
+<li>szeroko stosowane w: <em>polityce pieniężnej</em> i <em>fiskalnej</em>, <em>rynku finansowym</em>, …</li>
+<li>rozszerzalne: <em>wiele wariantów specyfikacji</em>
 <ul>
-<li class="fragment">facilitate the analysis of <strong>dynamic causal effects</strong> of a well-isolated cause</li>
-<li class="fragment">relatively simple to work with data and provide <em>empirical evidence on the propagation of shocks</em> through economies and markets</li>
-<li class="fragment">provide data-driven stylised facts to be incorporated in theoretical models</li>
-<li class="fragment">extensively used for: <em>monetary</em> and <em>fiscal</em> policy, <em>financial</em> markets, …</li>
-<li class="fragment">extendible: <em>featuring many variations in specification</em>
-<ul>
-<li class="fragment">non-normality</li>
-<li class="fragment">heteroskedasticity</li>
-<li class="fragment">time-varying parameters</li>
-<li class="fragment">Bayesian hierarchical modelling</li>
+<li>nieliniowość</li>
+<li>heteroskedastyczność</li>
+<li>zmienne parametry w czasie</li>
+<li>modelowanie hierarchiczne bayesowskie</li>
 </ul></li>
-<li class="fragment">Proposed by <a href="https://doi.org/10.2307/1912017">Sims (1980)</a></li>
+<li>zaproponowane przez <a href="https://doi.org/10.2307/1912017">Sims (1980)</a></li>
 </ul>
-</div>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
 </section>
-<section id="structural-vector-autoregressions-3" class="slide level2">
-<h2>structural vector autoregressions</h2>
+<section id="strukturalne-modele-var-3" class="slide level2">
+<h2>strukturalne modele VAR</h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
-<h3 id="the-model.">the model.</h3>
+<h3 id="model.">model.</h3>
 <p><span class="math display">\[\begin{align}
-\text{VAR equation: }&amp;&amp; y_t &amp;= \mathbf{A}_1 y_{t-1} + \dots + \mathbf{A}_p y_{t-p} + \mathbf{A}_d x_{t} + \epsilon_t\\[1ex]
-\text{structural equation: }&amp;&amp; \mathbf{B}\epsilon_t &amp;= u_t\\[1ex]
-\text{structural shocks: }&amp;&amp; u_t |Y_{t-1} &amp;\sim N_N\left(\mathbf{0}_N,\text{diag}\left(\boldsymbol\sigma_t^2\right)\right)
+\text{równanie VAR: }&amp;&amp; y_t &amp;= \mathbf{A}_1 y_{t-1} + \dots + \mathbf{A}_p y_{t-p} + \mathbf{A}_d x_{t} + \epsilon_t\\[1ex]
+\text{równanie structuralne: }&amp;&amp; \mathbf{B}\epsilon_t &amp;= u_t\\[1ex]
+\text{structuralne szoki: }&amp;&amp; u_t |Y_{t-1} &amp;\sim N_N\left(\mathbf{0}_N,\text{diag}\left(\boldsymbol\sigma_t^2\right)\right)
 \end{align}\]</span></p>
 <div class="fragment">
 <!-- -->
-<h3 id="notation.">notation.</h3>
+<h3 id="notacja.">notacja.</h3>
 <ul>
-<li><span class="math inline">\(y_t\)</span> - <span class="math inline">\(N\)</span>-vector of variables at time <span class="math inline">\(t\)</span></li>
-<li><span class="math inline">\(\mathbf{A}_i\)</span> and <span class="math inline">\(\mathbf{B}\)</span> - <span class="math inline">\(N\times N\)</span> matrices of autoregressive and structural coefficients</li>
-<li><span class="math inline">\(\epsilon_t\)</span> and <span class="math inline">\(u_t\)</span> - <span class="math inline">\(N\)</span>-vectors of error terms and structural shocks at time <span class="math inline">\(t\)</span></li>
-<li><span class="math inline">\(\boldsymbol\sigma_t^2\)</span> - <span class="math inline">\(N\)</span>-vector structural shock variances</li>
+<li><span class="math inline">\(y_t\)</span> - wektor <span class="math inline">\(N\)</span> zmiennych na okres <span class="math inline">\(t\)</span></li>
+<li><span class="math inline">\(\mathbf{A}_i\)</span> i <span class="math inline">\(\mathbf{B}\)</span> - <span class="math inline">\(N\times N\)</span> macierze parametrów autoregresyjnych i strukturalnych</li>
+<li><span class="math inline">\(\epsilon_t\)</span> i <span class="math inline">\(u_t\)</span> - wektory <span class="math inline">\(N\)</span> błędów statystycznych i szoków strukturalnych</li>
+<li><span class="math inline">\(\boldsymbol\sigma_t^2\)</span> - wektor <span class="math inline">\(N\)</span> wariancji szoków strukturalnych</li>
 </ul>
 </div>
 </section>
-<section id="svars-hierarchical-prior-distributions" class="slide level2">
-<h2>SVARs: hierarchical prior distributions</h2>
+<section id="svar-hierarchiczne-rozkłady-a-priori" class="slide level2">
+<h2>SVAR: hierarchiczne rozkłady a priori</h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -703,26 +699,26 @@
 <div class="column" style="width:45%;">
 <p><img data-src="bsvars.png" width="120"></p>
 <ul>
-<li>normal-generalised normal prior for <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{B}\)</span></li>
-<li>3-level local-global equation-specific shrinkage</li>
-<li>Minnesota prior for non-stationary time series</li>
-<li>improves model-fit and forecasting precision</li>
+<li>normalny-uogólniony normalny rozkład <em>a priori</em> dla <span class="math inline">\(\mathbf{A}\)</span> i <span class="math inline">\(\mathbf{B}\)</span></li>
+<li>wielopoziomowa estymacja wariancji <em>a priori</em></li>
+<li>rozkład <em>a priori</em> z Minnesoty dla niestacjonarnych szeregów czasowych</li>
+<li>bardziej precyzyjne estymacja i prognozowanie</li>
 </ul>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:45%;">
 <p><img data-src="bsvarSIGNs.png" width="120"></p>
 <ul>
-<li>normal-inverse Wishart prior for <span class="math inline">\(\mathbf{A}\)</span> and <span class="math inline">\(\mathbf{\Sigma} = (\mathbf{B}'\mathbf{B})^{-1}\)</span></li>
-<li>estimated Minnesota prior shrinkage levels</li>
-<li>Minnesota prior for non-stationary time series</li>
-<li>improves model-fit and forecasting precision</li>
+<li>rozkład <em>a priori</em> normalny i odwrócony Wisharta dla <span class="math inline">\(\mathbf{A}\)</span> i <span class="math inline">\(\mathbf{\Sigma} = (\mathbf{B}'\mathbf{B})^{-1}\)</span></li>
+<li>estymacja wariancji <em>a priori</em></li>
+<li>rozkład <em>a priori</em> z Minnesoty dla niestacjonarnych szeregów czasowych</li>
+<li>bardziej precyzyjne estymacja i prognozowanie</li>
 </ul>
 </div>
 </div>
 </section>
-<section id="svars-volatility-modelling" class="slide level2">
-<h2>SVARs: volatility modelling</h2>
+<section id="svar-modelowanie-zmienności" class="slide level2">
+<h2>SVAR: modelowanie zmienności</h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -730,16 +726,16 @@
 <div class="column" style="width:65%;">
 <p><img data-src="bsvars.png" width="120"></p>
 <ul>
-<li><p>homoskedasticity <span class="math inline">\(\boldsymbol\sigma_{n.t}^2 = 1\)</span></p></li>
-<li><p>stochastic volatility</p></li>
-<li><p>stationary Markov-switching heteroskedasticity</p></li>
-<li><p>non-parametric Markov-switching heteroskedasticity</p></li>
-<li><p>joint distribution of structural shocks</p>
+<li><p>homoskedastyczność <span class="math inline">\(\boldsymbol\sigma_{n.t}^2 = 1\)</span></p></li>
+<li><p>zmienność stochastyczna</p></li>
+<li><p>stacjonarny proces Markova dla zmienności</p></li>
+<li><p>nieparametryczny proces Markova dla zmienności</p></li>
+<li><p>rozkłady szoków</p>
 <ul>
-<li>normal</li>
-<li>finite mixtures of normal distributions</li>
-<li>non-parametric mixtures of normal distributions</li>
-<li>Student-t</li>
+<li>normalny</li>
+<li>skończona mieszanka rozkładów normalnych</li>
+<li>nieparametryczna mieszanka rozkładów normalnych</li>
+<li>rozkład t-Studenta</li>
 </ul></li>
 </ul>
 </div><div class="column" style="width:5%;">
@@ -747,14 +743,14 @@
 </div><div class="column" style="width:30%;">
 <p><img data-src="bsvarSIGNs.png" width="120"></p>
 <ul>
-<li>homoskedastic</li>
-<li>normal</li>
+<li>homoskedastyczność</li>
+<li>normalny rozkład szoków</li>
 </ul>
 </div>
 </div>
 </section>
-<section id="svars-structural-identification" class="slide level2">
-<h2>SVARs: structural identification</h2>
+<section id="svar-identyfikacja" class="slide level2">
+<h2>SVAR: identyfikacja</h2>
 <div class="footer">
 <p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
@@ -762,330 +758,329 @@
 <div class="column" style="width:45%;">
 <p><img data-src="bsvars.png" width="120"></p>
 <ul>
-<li>exclusion restrictions</li>
-<li>time-varying volatility</li>
-<li>non-normality</li>
+<li>restrykcje zerowe</li>
+<li>heteroskedastyczność</li>
+<li>nienormalne rozkłady szoków</li>
 </ul>
 </div><div class="column" style="width:5%;">
 
 </div><div class="column" style="width:45%;">
 <p><img data-src="bsvarSIGNs.png" width="120"></p>
 <ul>
-<li>sign restrictions</li>
-<li>exclusion restrictions</li>
-<li>narrative restrictions</li>
+<li>restrykcje znaków</li>
+<li>restrykcje zerowe</li>
+<li>restrykcje narracyjne</li>
 </ul>
 </div>
 </div>
 </section>
-<section id="structural-vector-autoregressions-4" class="slide level2">
-<h2>Structural Vector Autoregressions</h2>
+<section id="strukturalne-modele-var-4" class="slide level2">
+<h2>strukturalne modele VAR</h2>
 <div class="footer">
-<p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
+<p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
-<h3 id="the-var-errors.">The VAR errors.</h3>
+<h3 id="błędy-statystyczne.">błędy statystyczne.</h3>
 <p><span class="math display">\[\begin{align}
 &amp;&amp;&amp;\\
-\text{structural equation: }&amp;&amp; \epsilon_t &amp;= \mathbf{B}^{-1}u_t = \mathbf{\Theta}_0 u_t\\[1ex]
-\text{error terms: }&amp;&amp; \epsilon_t |Y_{t-1} &amp;\sim N_N\left(\mathbf{0}_N,\Sigma\right)\\[1ex]
-\text{covariance: }&amp;&amp; \mathbf\Sigma &amp;= \mathbf{B}^{-1}\mathbf{B}^{-1\prime} = \Theta_0\Theta_0'
+\text{równanie strukturalne: }&amp;&amp; \epsilon_t &amp;= \mathbf{B}^{-1}u_t = \mathbf{\Theta}_0 u_t\\[1ex]
+\text{błędy statystyczne: }&amp;&amp; \epsilon_t |Y_{t-1} &amp;\sim N_N\left(\mathbf{0}_N,\Sigma\right)\\[1ex]
+\text{kowariancja: }&amp;&amp; \mathbf\Sigma &amp;= \mathbf{B}^{-1}\mathbf{B}^{-1\prime} = \Theta_0\Theta_0'
 \end{align}\]</span></p>
-<h3 id="notation.-1">Notation.</h3>
+<h3 id="notacja.-1">Notacja.</h3>
 <ul>
-<li><span class="math inline">\(\mathbf\Sigma\)</span> - <span class="math inline">\(N\times N\)</span> covariance matrix of error terms</li>
-<li><span class="math inline">\(\Theta_0 = \mathbf{B}^{-1}\)</span> - <span class="math inline">\(N\times N\)</span> matrix of <strong>contemporaneous effects</strong></li>
+<li><span class="math inline">\(\mathbf\Sigma\)</span> - <span class="math inline">\(N\times N\)</span> kowariancja błędów statystycznych</li>
+<li><span class="math inline">\(\Theta_0 = \mathbf{B}^{-1}\)</span> - <span class="math inline">\(N\times N\)</span> macierz efektów strukturalnych</li>
 </ul>
 </section>
-<section id="structural-vector-autoregressions-5" class="slide level2">
-<h2>Structural Vector Autoregressions</h2>
+<section id="strukturalne-modele-var-5" class="slide level2">
+<h2>strukturalne modele VAR</h2>
 <div class="footer">
-<p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
+<p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
-<p>Plug the <em>VAR equation</em> into the <em>structural equation</em> to obtain:</p>
+<p>Wstaw <em>równanie VAR</em> w <em>równanie strukturalne</em>:</p>
 <p><span class="math display">\[\begin{align}
 \mathbf{B}y_t &amp;= \mathbf{B}\mathbf{A}_1 y_{t-1} + \dots + \mathbf{B}\mathbf{A}_p y_{t-p} + \mathbf{B}\boldsymbol\mu_0 + u_t\\[1ex]
 &amp;\\
 \end{align}\]</span></p>
-<h3 id="contemporaneous-relationships.">Contemporaneous relationships.</h3>
-<p>Let <span class="math inline">\(N=2\)</span></p>
+<h3 id="relacje-strukturanlne.">relacje strukturanlne.</h3>
+<p>Niech <span class="math inline">\(N=2\)</span></p>
 <p><span class="math display">\[\begin{align}
 \mathbf{B}y_t &amp;= \begin{bmatrix}B_{11}&amp;B_{12}\\B_{21}&amp;B_{22}\end{bmatrix}\begin{bmatrix}y_{1t}\\y_{2t}\end{bmatrix}
 \end{align}\]</span></p>
 </section>
-<section id="structural-vector-autoregressions-6" class="slide level2">
-<h2>Structural Vector Autoregressions</h2>
+<section id="strukturalne-modele-var-6" class="slide level2">
+<h2>strukturalne modele VAR</h2>
 <div class="footer">
-<p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
+<p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
-<p>Plug the <em>structural equation</em> for <span class="math inline">\(\epsilon_t\)</span> into the <em>VAR equation</em> to obtain:</p>
+<p>Wstaw <em>równanie strukturalne</em> dla <span class="math inline">\(\epsilon_t\)</span> w <em>równanie VAR</em>:</p>
 <p><span class="math display">\[\begin{align}
 y_t &amp;= \mathbf{A}_1 y_{t-1} + \dots + \mathbf{A}_p y_{t-p} + \boldsymbol\mu_0 + \mathbf{B}^{-1}u_t\\[1ex]
 y_t &amp;= \mathbf{A}_1 y_{t-1} + \dots + \mathbf{A}_p y_{t-p} + \boldsymbol\mu_0 + \mathbf{\Theta}_0 u_t
 \end{align}\]</span></p>
-<h3 id="contemporaneous-effects.">Contemporaneous effects.</h3>
-<p>Let <span class="math inline">\(N=2\)</span></p>
+<h3 id="efekty-strukturane.">efekty strukturane.</h3>
+<p>Niech <span class="math inline">\(N=2\)</span></p>
 <p><span class="math display">\[\begin{align}
 \begin{bmatrix}y_{1t}\\y_{2t}\end{bmatrix} &amp;= \dots +
 \begin{bmatrix}\Theta_{11}&amp;\Theta_{12}\\\Theta_{21}&amp;\Theta_{22}\end{bmatrix}\begin{bmatrix}u_{1t}\\ u_{2t}\end{bmatrix}
 \end{align}\]</span></p>
 </section>
-<section id="identification-of-structural-vars" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">Identification of Structural VARs </span></h2>
+<section id="identyfikacja-modeli-strukturalnych-1" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">identyfikacja modeli strukturalnych</span></h2>
 </section>
-<section id="identification-of-svars-simplified" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
+<section id="identyfikacja-modeli-strukturalnych-2" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
 <div class="footer">
-<p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
+<p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
-<h3 id="covariance-and-structural-relationships.">Covariance and structural relationships.</h3>
+<h3 id="kowariancja-i-relacje-strukturalne.">kowariancja i relacje strukturalne.</h3>
 <p><span class="math display">\[\begin{align}
 &amp;\\
 \mathbf\Sigma &amp;= \mathbf{B}^{-1}\mathbf{B}^{-1\prime}\\[1ex]
 \end{align}\]</span></p>
 <ul>
-<li><span class="math inline">\(\mathbf\Sigma\)</span> can be estimated using data easily</li>
+<li><span class="math inline">\(\mathbf\Sigma\)</span> może być estymowana z danych</li>
+<li>układ równań strukturalnych do rozwiązanie dla <span class="math inline">\(\mathbf{B}\)</span></li>
+<li><span class="math inline">\(\mathbf\Sigma\)</span> jest macierzą <em>symetryczną</em> <span class="math inline">\(N\times N\)</span></li>
+<li><span class="math inline">\(\mathbf\Sigma\)</span> ma <span class="math inline">\(N(N+1)/2\)</span> unikalnych elementów, tj. równań</li>
+<li><span class="math inline">\(\mathbf{B}\)</span> jest <span class="math inline">\(N\times N\)</span> macierzą z <span class="math inline">\(N^2\)</span> elementami do estymacji</li>
+<li>niewystarczająca liczba równań do estymacji <span class="math inline">\(\mathbf{B}\)</span></li>
+<li><span class="math inline">\(\mathbf{B}\)</span> <text style="color:#77001b;"><strong>nie jest indentyfikowalna</strong></text></li>
 </ul>
-<div>
-<ul>
-<li class="fragment">The relationship presents a system of equations to be solved for <span class="math inline">\(\mathbf{B}\)</span></li>
-<li class="fragment"><span class="math inline">\(\mathbf\Sigma\)</span> is a <em>symmetric</em> <span class="math inline">\(N\times N\)</span> matrix</li>
-<li class="fragment"><span class="math inline">\(\mathbf\Sigma\)</span> has <span class="math inline">\(N(N+1)/2\)</span> unique elements given equations</li>
-<li class="fragment"><span class="math inline">\(\mathbf{B}\)</span> is an <span class="math inline">\(N\times N\)</span> matrix with <span class="math inline">\(N^2\)</span> unique elements to estimate</li>
-<li class="fragment">We cannot estimate all elements of <span class="math inline">\(\mathbf{B}\)</span> using <span class="math inline">\(N(N+1)/2\)</span> equations</li>
-<li class="fragment"><span class="math inline">\(\mathbf{B}\)</span> is <text style="color:#77001b;"><strong>not identified</strong></text></li>
-</ul>
-</div>
 </section>
-<section id="identification-of-svars-simplified-1" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
+<section id="identyfikacja-modeli-strukturalnych-3" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
 <div class="footer">
-<p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
+<p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
-<h3 id="exclusion-restrictions.">Exclusion restrictions.</h3>
+<h3 id="restrykcje-zerowe.">restrykcje zerowe.</h3>
 <p><span class="math display">\[\begin{align}
 &amp;\\
 \mathbf\Sigma &amp;= \mathbf{B}^{-1}\mathbf{B}^{-1\prime}\\[1ex]
 \end{align}\]</span></p>
-<h3 id="identification.">Identification.</h3>
+<h3 id="identyfikacja.">identyfikacja.</h3>
 <ul>
-<li>Only <span class="math inline">\(N(N+1)/2\)</span> elements in <span class="math inline">\(\mathbf{B}\)</span> can be estimated</li>
-<li>Impose <span class="math inline">\(N(N-1)/2\)</span> restrictions on <span class="math inline">\(\mathbf{B}\)</span> to solve the equation</li>
-<li>This identifies the rows of <span class="math inline">\(\mathbf{B}\)</span> (and the columns of <span class="math inline">\(\mathbf\Theta_0\)</span>) up to a sign</li>
-<li>Change the sign of any number of <span class="math inline">\(\mathbf{B}\)</span> rows and <span class="math inline">\(\mathbf\Sigma\)</span> will not change</li>
-<li>Often <span class="math inline">\(\mathbf{B}\)</span> is made lower-triangular</li>
+<li>jedynie <span class="math inline">\(N(N+1)/2\)</span> elementów w <span class="math inline">\(\mathbf{B}\)</span> może być wyestymowanych</li>
+<li>nałożenie <span class="math inline">\(N(N-1)/2\)</span> restrykcji na <span class="math inline">\(\mathbf{B}\)</span> ułatwia rozwiązanie</li>
+<li>wiersze w <span class="math inline">\(\mathbf{B}\)</span> (i kolumny w <span class="math inline">\(\mathbf\Theta_0\)</span>) identyfikowane co do znaku</li>
+<li>zmiana znaków wierszy w <span class="math inline">\(\mathbf{B}\)</span> nie zmienia wartości <span class="math inline">\(\mathbf\Sigma\)</span></li>
+<li>często zakładamy trójkątną macierz <span class="math inline">\(\mathbf{B}\)</span></li>
 </ul>
 </section>
-<section id="identification-of-svars-simplified-2" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
+<section id="identyfikacja-modeli-strukturalnych-4" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
 <div class="footer">
-<p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
+<p><a href="https://bsvars.org">bsvars.org</a></p>
 </div>
-<h3 id="exclusion-restrictions.-1">Exclusion restrictions.</h3>
-<p>Let <span class="math inline">\(N=2\)</span></p>
+<h3 id="restrykcje-zerowe.-1">restrykcje zerowe.</h3>
+<p>Niech <span class="math inline">\(N=2\)</span></p>
 <p><span class="math display">\[\begin{align}
 \begin{bmatrix}\sigma_1^2&amp;\sigma_{12}\\ \sigma_{12}&amp;\sigma_2^2\end{bmatrix} &amp;\qquad
 \begin{bmatrix}B_{11}&amp;B_{12}\\ B_{21}&amp;B_{22}\end{bmatrix}\\[1ex]
 \end{align}\]</span></p>
 <ul>
-<li>3 unique elements in <span class="math inline">\(\mathbf\Sigma\)</span> - 3 equations in the system</li>
-<li>4 elements in <span class="math inline">\(\mathbf{B}\)</span> cannot be estimated</li>
+<li>3 unikalne elementy w <span class="math inline">\(\mathbf\Sigma\)</span> - 3 równania</li>
+<li>4 elemnty w <span class="math inline">\(\mathbf{B}\)</span> do rozwiązania</li>
 </ul>
-<h3 id="identification.-1">Identification.</h3>
+<h3 id="identyfikacja.-1">identyfikacja.</h3>
 <p><span class="math display">\[\begin{align}
 \begin{bmatrix}\sigma_1^2&amp;\sigma_{12}\\ \sigma_{12}&amp;\sigma_2^2\end{bmatrix} &amp;\qquad
 \begin{bmatrix}B_{11}&amp; 0\\ B_{21}&amp;B_{22}\end{bmatrix}\\[1ex]
 \end{align}\]</span></p>
 <ul>
-<li>3 equations identify 3 elements in <span class="math inline">\(\mathbf{B}\)</span></li>
+<li>3 równania pozwalaja rozwiązać 3 niewiadome w <span class="math inline">\(\mathbf{B}\)</span></li>
 </ul>
 </section>
-<section id="identification-of-svars-simplified-3" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
-<h3 id="identification-through-heteroskedasticity.">Identification through Heteroskedasticity.</h3>
-<p>Suppose that:</p>
+<section id="identyfikacja-modeli-strukturalnych-5" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
+<h3 id="identyfikacja-przez-heteroskedastyczność.">identyfikacja przez heteroskedastyczność.</h3>
+<p>Rozważ:</p>
 <ul>
-<li>there are two covariances, <span class="math inline">\(\mathbf\Sigma_1\)</span> and <span class="math inline">\(\mathbf\Sigma_2\)</span>, associated with the sample</li>
-<li>matrix <span class="math inline">\(\mathbf{B}_0\)</span> does not change over time</li>
-<li>structural shocks are heteroskedastic with covariances <span class="math inline">\(\text{diag}\left(\boldsymbol\sigma_1^2\right)\)</span> and <span class="math inline">\(\text{diag}\left(\boldsymbol\sigma_2^2\right)\)</span></li>
+<li>dwie kowariancje, <span class="math inline">\(\mathbf\Sigma_1\)</span> and <span class="math inline">\(\mathbf\Sigma_2\)</span>,</li>
+<li>macież <span class="math inline">\(\mathbf{B}_0\)</span> niezmienna w czasie</li>
+<li>kowariancje heteroskedastycznych szoków strukturalnych <span class="math inline">\(\text{diag}\left(\boldsymbol\sigma_1^2\right)\)</span> i <span class="math inline">\(\text{diag}\left(\boldsymbol\sigma_2^2\right)\)</span></li>
 </ul>
 <p><span class="math display">\[\begin{align}
 \mathbf\Sigma_1 &amp;= \mathbf{B}_0^{-1}\text{diag}\left(\boldsymbol\sigma_1^2\right)\mathbf{B}_0^{-1\prime}\\[1ex]
 \mathbf\Sigma_2 &amp;= \mathbf{B}_0^{-1}\text{diag}\left(\boldsymbol\sigma_2^2\right)\mathbf{B}_0^{-1\prime}
 \end{align}\]</span></p>
 </section>
-<section id="identification-of-svars-simplified-4" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
-<h3 id="identification-through-heteroskedasticity.-1">Identification through Heteroskedasticity.</h3>
+<section id="identyfikacja-modeli-strukturalnych-6" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
+<h3 id="identyfikacja-przez-heteroskedastyczność.-1">identyfikacja przez heteroskedastyczność.</h3>
 <p><span class="math display">\[\begin{align}
 \mathbf\Sigma_1 &amp;= \mathbf{B}_0^{-1}\text{diag}\left(\boldsymbol\sigma_1^2\right)\mathbf{B}_0^{-1\prime}\\[1ex]
 \mathbf\Sigma_2 &amp;= \mathbf{B}_0^{-1}\text{diag}\left(\boldsymbol\sigma_2^2\right)\mathbf{B}_0^{-1\prime}
 \end{align}\]</span></p>
-<h3 id="identification.-2">Identification.</h3>
+<h3 id="identyfikacja.-2">identyfikacja.</h3>
 <ul>
-<li><span class="math inline">\(\mathbf\Sigma_1\)</span> and <span class="math inline">\(\mathbf\Sigma_2\)</span> contain <span class="math inline">\(N^2+N\)</span> unique elements</li>
-<li>All <span class="math inline">\(N^2\)</span> elements of <span class="math inline">\(\mathbf{B}_0\)</span> can be estimated</li>
-<li>Both <span class="math inline">\(N\)</span>-vectors <span class="math inline">\(\boldsymbol\sigma_1^2\)</span> and <span class="math inline">\(\boldsymbol\sigma_2^2\)</span> can be estimated due to additional restriction: <span class="math inline">\(E\left[\text{diag}\left(\boldsymbol\sigma_i^2\right)\right] = \mathbf{I}_N\)</span></li>
+<li><span class="math inline">\(\mathbf\Sigma_1\)</span> i <span class="math inline">\(\mathbf\Sigma_2\)</span> mają <span class="math inline">\(N^2+N\)</span> unikalnych elementów</li>
+<li>wszystkie <span class="math inline">\(N^2\)</span> elementy w <span class="math inline">\(\mathbf{B}_0\)</span> mogą być wyestymowane</li>
+<li>oba wektory <span class="math inline">\(\boldsymbol\sigma_1^2\)</span> i <span class="math inline">\(\boldsymbol\sigma_2^2\)</span> mogą być wyestymowane dzięki założeniu: <span class="math inline">\(E\left[\text{diag}\left(\boldsymbol\sigma_i^2\right)\right] = \mathbf{I}_N\)</span></li>
 </ul>
 </section>
-<section id="identification-of-svars-simplified-5" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
-<p>The setup can be generalised to conditional heteroskedasticity of structural shocks</p>
+<section id="identyfikacja-modeli-strukturalnych-7" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
+<p>Rozważ uogólnienie</p>
 <p><span class="math display">\[\begin{align}
 u_t |Y_{t-1} &amp;\sim N_N\left(\mathbf{0}_N, \text{diag}\left(\boldsymbol\sigma_t^2\right)\right)\\[1ex]
 \mathbf\Sigma_t &amp;= \mathbf{B}_0^{-1}\text{diag}\left(\boldsymbol\sigma_t^2\right)\mathbf{B}_0^{-1\prime}
 \end{align}\]</span></p>
-<h3 id="identification.-3">Identification.</h3>
+<h3 id="identyfikacja.-3">identyfikacja.</h3>
 <ul>
-<li>Matrix <span class="math inline">\(\mathbf{B}_0\)</span> is identified up to its rows’ sign change and equations’ reordering</li>
-<li>shocks are identified if changes in their conditional variances are non-proportional</li>
-<li>Structural shocks’ conditional variances <span class="math inline">\(\boldsymbol\sigma_t^2\)</span> can be estimated</li>
+<li>identyfikacja macierzy <span class="math inline">\(\mathbf{B}_0\)</span> co do znaków i kolejności wierszy</li>
+<li>szoki są identyfikowalne jeśli wariancje warunkowe nie są proporcjonalne</li>
+<li>wariancje warunkowe <span class="math inline">\(\boldsymbol\sigma_t^2\)</span> mogą być wyestymowane</li>
 </ul>
-<h3 id="heteroskedasticity-modeling.">Heteroskedasticity Modeling.</h3>
-<p>Choose any (conditional) variance model for <span class="math inline">\(\boldsymbol\sigma_t^2\)</span> that fits the data well.</p>
+<h3 id="modelowanie-zmienności.">modelowanie zmienności.</h3>
+<p>Wybierz model dla <span class="math inline">\(\boldsymbol\sigma_t^2\)</span> o najlepszych właściwościach.</p>
 </section>
-<section id="identification-of-svars-simplified-6" class="slide level2" data-background-color="#77001b">
-<h2><span style="color: #ff68b4;">Identification of SVARs (Simplified)</span></h2>
+<section id="identyfikacja-modeli-strukturalnych-8" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">identyfikacja modeli strukturalnych</span></h2>
 
 <img data-src="index_files/figure-revealjs/Alternative_Identification-1.png" width="960" class="r-stretch"></section>
-<section id="identification-of-svars-simplified-7" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
+<section id="identyfikacja-modeli-strukturalnych-9" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
 <div class="footer">
 <p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
 </div>
-<h3 id="structural-equation.">Structural equation.</h3>
+<h3 id="równanie-strukturalne.">równanie strukturalne.</h3>
 <p><span class="math display">\[\begin{align}
-\text{contemporaneous relationships:}&amp;&amp;\mathbf{Q}\mathbf{B}\epsilon_t &amp;= \mathbf{Q}u_t\\[1ex]
-\text{contemporaneous effects:}&amp;&amp;\epsilon_t &amp;= \mathbf{\Theta}_0\mathbf{Q}'\mathbf{Q} u_t\\[1ex]
+\text{relacje strukturalne:}&amp;&amp;\mathbf{Q}\mathbf{B}\epsilon_t &amp;= \mathbf{Q}u_t\\[1ex]
+\text{efekty strukturalne:}&amp;&amp;\epsilon_t &amp;= \mathbf{\Theta}_0\mathbf{Q}'\mathbf{Q} u_t\\[1ex]
 \end{align}\]</span></p>
-<h3 id="identification-up-to-rotation.">Identification up to rotation.</h3>
+<h3 id="identyfikacja-co-do-macierzy-obrotu.">identyfikacja co do macierzy obrotu.</h3>
 <p><span class="math display">\[\begin{align}
 \mathbf\Sigma &amp;= \mathbf{B}^{-1}\mathbf{Q}'\mathbf{Q}\mathbf{B}^{-1\prime} = \mathbf{\Theta}_0\mathbf{Q}'\mathbf{Q}\mathbf{\Theta}_0^{\prime}\\[1ex]
 \mathbf{Q}'\mathbf{Q} &amp;= \mathbf{I}_N\\[1ex]
 \end{align}\]</span></p>
 <ul>
-<li>likelihood is invariant to rotation</li>
-<li>identification of the system narrows down the set of <span class="math inline">\(\mathbf{Q}\)</span></li>
-<li>exclusion restrictions make <span class="math inline">\(\mathbf{Q}\)</span> diagonal with <span class="math inline">\(\pm1\)</span> diagonal elements</li>
+<li>funkcja wiarygodności nie zależy od <span class="math inline">\(\mathbf{Q}\)</span></li>
+<li>identyfikacja modely zawęża typ <span class="math inline">\(\mathbf{Q}\)</span></li>
+<li>restrykcje zerowe zmieniają typ macierzy <span class="math inline">\(\mathbf{Q}\)</span> do diagonalnej z elementami <span class="math inline">\(\pm1\)</span></li>
 </ul>
 </section>
-<section id="identification-of-svars-simplified-8" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
+<section id="identyfikacja-modeli-strukturalnych-10" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
 <div class="footer">
 <p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
 </div>
-<h3 id="sign-restrictions.">Sign Restrictions.</h3>
+<h3 id="restrykcje-znaku.">restrykcje znaku.</h3>
 <p><span class="math display">\[\begin{align}
-\text{contemporaneous relationships:}&amp;&amp;\tilde{\mathbf{B}}\epsilon_t &amp;= \tilde{u}_t\\[1ex]
-\text{contemporaneous effects:}&amp;&amp;\epsilon_t &amp;= \tilde{\mathbf{\Theta}}_0\tilde{u}_t\\[1ex]
+\text{relacje strukturalne:}&amp;&amp;\tilde{\mathbf{B}}\epsilon_t &amp;= \tilde{u}_t\\[1ex]
+\text{efekty strukturalne:}&amp;&amp;\epsilon_t &amp;= \tilde{\mathbf{\Theta}}_0\tilde{u}_t\\[1ex]
 \end{align}\]</span></p>
 <ul>
-<li>restrict the sign of the elements of <span class="math inline">\(\tilde{\mathbf{B}}\)</span> or/and <span class="math inline">\(\tilde{\mathbf{\Theta}}_0\)</span></li>
-<li>the model is set identified: it is identified up to a set of matrices <span class="math inline">\(\mathbf{Q}\)</span> that satisfy the sign restrictions</li>
-<li>the estimation task is to represent the identified set</li>
+<li>restrykcje na znak elementów w <span class="math inline">\(\tilde{\mathbf{B}}\)</span> i/lub <span class="math inline">\(\tilde{\mathbf{\Theta}}_0\)</span></li>
+<li>zawęża zbiór identyfikowalny: model jest identyfikowalny co do macierzy obrotu <span class="math inline">\(\mathbf{Q}\)</span> koherentnej z restrykcjami</li>
+<li>estymacja ma za cel przybliżenie zbioru identyfikowalnego</li>
 </ul>
-<h3 id="sign-and-zero-restrictions.">sign and zero restrictions.</h3>
+<h3 id="restrykcje-znaku-i-zerowe.">restrykcje znaku i zerowe.</h3>
 <ul>
-<li>restrict the sign of the elements of <span class="math inline">\(\tilde{\mathbf{B}}\)</span> or/and <span class="math inline">\(\tilde{\mathbf{\Theta}}_0\)</span> or set some of them to zero</li>
-<li>further narrows down the identified set</li>
+<li>restrykcje zerowe i na znak elementów w <span class="math inline">\(\tilde{\mathbf{B}}\)</span> i/lub <span class="math inline">\(\tilde{\mathbf{\Theta}}_0\)</span></li>
+<li>zawęża zbiór identyfikowalny</li>
 </ul>
 </section>
-<section id="identification-of-svars-simplified-9" class="slide level2">
-<h2>Identification of SVARs (Simplified)</h2>
+<section id="identyfikacja-modeli-strukturalnych-11" class="slide level2">
+<h2>identyfikacja modeli strukturalnych</h2>
 <div class="footer">
 <p><a href="https://bsvars.github.io/2024-10-be24-bsvars">Bayesian Structural VARs</a></p>
 </div>
-<h3 id="narrative-restrictions.">Narrative Restrictions.</h3>
+<h3 id="restrykcje-narracyjne.">restrykcje narracyjne.</h3>
 <ul>
-<li>restrict the sign or relative contribution of <span class="math inline">\(u_t\)</span> or <span class="math inline">\(\tilde{u}_t\)</span></li>
-<li>restrictions based on narrative evidence, economic theory, and scientific consensus</li>
-<li>requires adjustment of the estimation algorithms</li>
-<li>further narrows down the identified set</li>
+<li>restrykcje na znak elementów lub wielkości <span class="math inline">\(u_t\)</span> lub <span class="math inline">\(\tilde{u}_t\)</span></li>
+<li>restrykcje w oparciu na narrację, teorię ekonomii i konsensus naukowy</li>
+<li>należy dostosować metody estymacji</li>
+<li>zawęża zbiór identyfikowalny</li>
 </ul>
-<h3 id="a-new-feature.">A new feature.</h3>
+<h3 id="nowa-cecha.">nowa cecha.</h3>
 <ul>
-<li>impose sign, zero, and narrative restrictions in one model using the <strong>bsvarSIGNs</strong> package</li>
+<li>restrykcje zerowe, narracyjne i na znak w jednym modelu w paczce <strong>bsvarSIGNs</strong></li>
 </ul>
 </section>
-<section id="bsvars-volatility-and-distribution-modelling" class="slide level2">
-<h2>bsvars volatility and distribution modelling</h2>
+<section id="modelowanie-rozkładu-i-zmienności-1" class="slide level2" data-background-color="#77001b">
+<h2><span style="color: #ff68b4;">modelowanie rozkładu i zmienności</span></h2>
 </section>
-<section id="non-centred-stochastic-volatility" class="slide level2">
-<h2>Non-centred Stochastic Volatility</h2>
+<section id="niescentrowana-zmienność-stochastyczna" class="slide level2">
+<h2>niescentrowana zmienność stochastyczna</h2>
 <p><img data-src="bsvars.png" class="absolute" style="top: -10px; right: 10px; width: 120px; "></p>
 <p><span class="math display">\[\begin{align}
 &amp;\\
-\text{conditional variance:}&amp;&amp;\sigma_{n.t}^2 &amp;= \exp\left\{\omega_n h_{n.t}\right\}\\
-\text{log-volatility:}&amp;&amp;h_{n.t} &amp;= \rho_n h_{n.t-1} + v_{n.t}\\
-\text{volatility innovation:}&amp;&amp;v_{n.t}&amp;\sim N\left(0,1\right)\\
+\text{wariancja warunkowa:}&amp;&amp;\sigma_{n.t}^2 &amp;= \exp\left\{\omega_n h_{n.t}\right\}\\
+\text{w skali log:}&amp;&amp;h_{n.t} &amp;= \rho_n h_{n.t-1} + v_{n.t}\\
+\text{innowacje zmienności:}&amp;&amp;v_{n.t}&amp;\sim N\left(0,1\right)\\
 \end{align}\]</span></p>
 <ul>
-<li>excellent volatility forecasting performance</li>
-<li>standardization around <span class="math inline">\(\sigma_{n.t}^2 = 1\)</span></li>
-<li><code>verify_identification()</code> by checking <span class="math inline">\(H_0:\omega_n = 0\)</span></li>
+<li>świetna zdolność do prognozowania</li>
+<li>normalizajca <span class="math inline">\(\sigma_{n.t}^2 = 1\)</span></li>
+<li><code>verify_identification()</code> przez ocene restrykcji <span class="math inline">\(H_0:\omega_n = 0\)</span></li>
 </ul>
 </section>
-<section id="centred-stochastic-volatility" class="slide level2">
-<h2>Centred Stochastic Volatility</h2>
+<section id="scentrowana-zmienność-stochastyczna" class="slide level2">
+<h2>scentrowana zmienność stochastyczna</h2>
 <p><img data-src="bsvars.png" class="absolute" style="top: -10px; right: 10px; width: 120px; "></p>
 <p><span class="math display">\[\begin{align}
 &amp;\\
-\text{conditional variance:}&amp;&amp;\sigma_{n.t}^2 &amp;= \exp\left\{ \tilde{h}_{n.t}\right\}\\
-\text{log-volatility:}&amp;&amp;\tilde{h}_{n.t} &amp;= \rho_n \tilde{h}_{n.t-1} + \tilde{v}_{n.t}\\
-\text{volatility innovation:}&amp;&amp;\tilde{v}_{n.t}&amp;\sim N\left(0,\omega_n^2\right)\\
+\text{wariancja warunkowa:}&amp;&amp;\sigma_{n.t}^2 &amp;= \exp\left\{ \tilde{h}_{n.t}\right\}\\
+\text{w skali log:}&amp;&amp;\tilde{h}_{n.t} &amp;= \rho_n \tilde{h}_{n.t-1} + \tilde{v}_{n.t}\\
+\text{innowacje zmienności:}&amp;&amp;\tilde{v}_{n.t}&amp;\sim N\left(0,\omega_n^2\right)\\
 \end{align}\]</span></p>
 <ul>
-<li>potential for improved forecasting performance</li>
+<li>świetna zdolność do prognozowania</li>
 </ul>
 </section>
-<section id="stochastic-volatility-conditional-variances" class="slide level2">
-<h2>Stochastic Volatility: conditional variances</h2>
+<section id="zmienność-stochastyczna-rozkłady-a-priori" class="slide level2">
+<h2>zmienność stochastyczna: rozkłady a priori</h2>
 
 <img data-src="index_files/figure-revealjs/plot_cv_prior-1.png" width="960" class="r-stretch"></section>
-<section id="markov-switching-heteroskedasticity." class="slide level2">
-<h2>Markov-switching heteroskedasticity.</h2>
+<section id="proces-markowa-dla-zmienności." class="slide level2">
+<h2>proces Markowa dla zmienności.</h2>
 <p><img data-src="bsvars.png" class="absolute" style="top: -10px; right: 10px; width: 120px; "></p>
 <p><span class="math display">\[\begin{align}
 &amp;\\
-\text{structural shocks:}&amp;&amp;\mathbf{u}_t\mid s_t \sim N\left( \mathbf{0}_N, \text{diag}\left(\boldsymbol{\sigma}_{s_t}^2\right) \right)\\
-\text{prior:}&amp;&amp; M^{-1}\left(\boldsymbol{\sigma}_{1}^2, \dots, \boldsymbol{\sigma}_{M}^2\right) \sim Dirichlet(\underline{a}\boldsymbol\imath')\\
-\text{latent process:}&amp;&amp; s_t\sim \text{Markov}(\mathbf{P},\boldsymbol\pi_0)
+\text{szoki strukturalne:}&amp;&amp;\mathbf{u}_t\mid s_t \sim N\left( \mathbf{0}_N, \text{diag}\left(\boldsymbol{\sigma}_{s_t}^2\right) \right)\\
+\text{a priori:}&amp;&amp; M^{-1}\left(\boldsymbol{\sigma}_{1}^2, \dots, \boldsymbol{\sigma}_{M}^2\right) \sim Dirichlet(\underline{a}\boldsymbol\imath')\\
+\text{proces Markowa:}&amp;&amp; s_t\sim \text{Markov}(\mathbf{P},\boldsymbol\pi_0)
 \end{align}\]</span></p>
 <ul>
-<li>modelling Markov-switching heteroskedasticity</li>
-<li>provides identification information</li>
-<li>potential gains in forecasting precision</li>
-<li><code>verify_identification()</code> by checking <span class="math inline">\(H_0:\boldsymbol{\sigma}_{1}^2, \dots, \boldsymbol{\sigma}_{M}^2 = 1\)</span></li>
+<li>modelowanie proces Markowa dla zmienności</li>
+<li>zapewnia identyfikację</li>
+<li>poprawa zdolności do prognozowania</li>
+<li><code>verify_identification()</code> przez ocenę restrykcji <span class="math inline">\(H_0:\boldsymbol{\sigma}_{1}^2, \dots, \boldsymbol{\sigma}_{M}^2 = 1\)</span></li>
 </ul>
 </section>
-<section id="mixture-models." class="slide level2">
-<h2>mixture models.</h2>
+<section id="mieszanka-rozkładów-normalnych." class="slide level2">
+<h2>mieszanka rozkładów normalnych.</h2>
 <p><img data-src="bsvars.png" class="absolute" style="top: -10px; right: 10px; width: 120px; "></p>
 <p><span class="math display">\[\begin{align}
 &amp;\\
-\text{structural shocks:}&amp;&amp;\mathbf{u}_t\mid s_t \sim N\left( \mathbf{0}_N, \text{diag}\left(\boldsymbol{\sigma}_{s_t}^2\right) \right)\\
-\text{prior:}&amp;&amp; M^{-1}\left(\boldsymbol{\sigma}_{1}^2, \dots, \boldsymbol{\sigma}_{M}^2\right) \sim Dirichlet(\underline{a}\boldsymbol\imath')\\
-\text{latent process:}&amp;&amp; Pr[s_t]=\boldsymbol\pi_0
+\text{szoki strukturalne:}&amp;&amp;\mathbf{u}_t\mid s_t \sim N\left( \mathbf{0}_N, \text{diag}\left(\boldsymbol{\sigma}_{s_t}^2\right) \right)\\
+\text{a priori:}&amp;&amp; M^{-1}\left(\boldsymbol{\sigma}_{1}^2, \dots, \boldsymbol{\sigma}_{M}^2\right) \sim Dirichlet(\underline{a}\boldsymbol\imath')\\
+\text{prawdopodobieństwo:}&amp;&amp; Pr[s_t]=\boldsymbol\pi_0
 \end{align}\]</span></p>
 <ul>
-<li>mixture models</li>
-<li>non-normality provides identification information</li>
-<li><code>verify_identification()</code> by checking <span class="math inline">\(H_0:\boldsymbol{\sigma}_{1}^2, \dots, \boldsymbol{\sigma}_{M}^2 = 1\)</span></li>
+<li>modelowanie mieszanki rozkładów normalnych</li>
+<li>zapewnia identyfikację</li>
+<li><code>verify_identification()</code> przez ocenę restrykcji <span class="math inline">\(H_0:\boldsymbol{\sigma}_{1}^2, \dots, \boldsymbol{\sigma}_{M}^2 = 1\)</span></li>
 </ul>
 </section>
-<section id="student-t-shocks." class="slide level2">
-<h2>Student-t shocks.</h2>
+<section id="rozkład-t-studenta." class="slide level2">
+<h2>rozkład t-studenta.</h2>
 <p><img data-src="bsvars.png" class="absolute" style="top: -10px; right: 10px; width: 120px; "></p>
 <p><span class="math display">\[\begin{align}
 &amp;&amp;&amp;\\
-\text{structural shocks:}&amp;&amp;\mathbf{u}_t\mid\mathbf{x}_t &amp;\sim t\left( \mathbf{0}_N, \mathbf{I}_N, \nu \right)
+\text{szoki strukturalne:}&amp;&amp;\mathbf{u}_t\mid\mathbf{x}_t &amp;\sim t\left( \mathbf{0}_N, \mathbf{I}_N, \nu \right)
 \end{align}\]</span></p>
 <ul>
-<li><span class="math inline">\(\nu\)</span> - the degrees of freedom parameter is estimated</li>
-<li>fat tails provide identification information</li>
-<li>potential gains in forecasting precision</li>
-<li>robustness to outliers</li>
-<li><code>verify_identification()</code> by checking <span class="math inline">\(H_0:\nu \rightarrow\infty\)</span></li>
+<li><span class="math inline">\(\nu\)</span> - szacowane z danych stopnie swobody</li>
+<li>grube ogony zapewniają identyfikację</li>
+<li>poprawa zdolności do prognozowania</li>
+<li><code>verify_identification()</code> przez ocenę restrykcji <span class="math inline">\(H_0:\nu \rightarrow\infty\)</span></li>
 </ul>
+</section>
+<section id="section-1" class="slide level2" data-background-color="#77001b">
+<h2></h2>
+<p><img data-src="social_uek.png" class="absolute" style="top: 10px; right: 10px; width: 1000px; "></p>
 <div class="footer footer-default">
 
 </div>
