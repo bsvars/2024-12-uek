@@ -1169,9 +1169,6 @@ B_{41}&B_{42}&B_{43}&B_{44}
 \end{bmatrix}
 \begin{bmatrix} \Delta rgdp_t \\ \pi_t \\ cr_t \\ \Delta rtwi_t \end{bmatrix} \end{align}
 
-- In the **extended** model, the monetary policy shock is not identified
-- Use identification via heteroskedasticity to identify it
-
 
 ## Four-Variable Monetary System
 
